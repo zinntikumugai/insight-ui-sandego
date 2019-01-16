@@ -102,7 +102,12 @@
           </tr>
           <tr>
            <td translate>Mining Difficulty</td>
-            <td class="text-right">{{info.difficulty}}</td>
+            <td class="text-right">
+              <ul style="list-style-type: none">
+                <li>PoW: {{info.difficulty["proof-of-work"] | number:8}}</li>
+                <li>PoS: {{info.difficulty["proof-of-stake"] | number: 8}}</li>
+              </ul>
+            </td>
           </tr>
           <tr>
             <td translate>Network</td>
